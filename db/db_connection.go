@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-func DatabaseConnection() {
+func DatabaseConnection() (*gorm.DB, error) {
 	// load the .env
 	err := godotenv.Load()
 	if err != nil {
@@ -39,4 +39,5 @@ func DatabaseConnection() {
 		log.Fatal("failed to migrate the database")
 	}
 
+	return db, nil
 }

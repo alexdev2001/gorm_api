@@ -1,7 +1,7 @@
 package models
 
 type Student struct {
-	name  string `gorm:"primary_key"`
-	age   uint   `gorm:"unique"`
-	grade int    `gorm:"size:5"`
+	Name  string `gorm:"primary_key"`
+	Age   uint   `gorm:"unique"`
+	Grade int    `gorm:"size:5"`
 }
